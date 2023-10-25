@@ -62,11 +62,6 @@
       <!-- end header -->
       <section >
          <div id="main_slider" class="carousel slide banner-main" data-ride="carousel">
-            <ol class="carousel-indicators">
-               <li data-target="#main_slider" data-slide-to="0" class="active"></li>
-               <li data-target="#main_slider" data-slide-to="1"></li>
-               <li data-target="#main_slider" data-slide-to="2"></li>
-            </ol>
             <div class="carousel-inner">
                <div class="carousel-item active">
                   <div class="container">
@@ -74,17 +69,16 @@
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                            <div class="carousel-caption ">
                               <h1><span id="resultname">당신</span> 님의 퍼스널컬러는 <strong class="color" id="resulttxt">이 색입니다</strong></h1><br>
-                               <div class="circle"><img src="images/face.png" style="overflow: hidden;" class="resultcolor" id="resultcolor"></div><br>
+                               <div class="circle"><img src="images/face.png" style="overflow: hidden; margin: 0 auto;" class="resultcolor" id="resultcolor"></div><br>
                               <p id="resultdes">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using</p>
                               
                            </div>
-                        </div>
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                         </div>
                      </div>
                   </div>
                </div>
              </div>
+             
                <!--<div class="carousel-item">
                   <div class="container">
                      <div class="row marginii">
@@ -146,9 +140,9 @@
             <div class="row">
                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                   <div class="plants-box">
-                     <figure><img src="images/plant1.jpg" alt="img"/></figure>
-                     <h3> Floral Vibrant</h3>
-                     <p>It is a long established fact that a reader will be distracted by the readable content of a page   when looking at its layout. The point of using Lorem Ipsumletters, as opposed to using</p>
+                     <figure id="figureimg"><a class="material-ripple" data-color="ff99ff"><img src="images/plant1.jpg" alt="img"/></a></figure>
+                     <h3 id="figurename"> Floral Vibrant</h3>
+                     <p id="figuredes">It is a long established fact that a reader will be distracted by the readable content of a page   when looking at its layout. The point of using Lorem Ipsumletters, as opposed to using</p>
                   </div>
                </div>
                <!--<div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
@@ -189,6 +183,23 @@
             </div>
          </div>
       </div>
+      <script>
+         Array.from(document.querySelectorAll(".material-ripple")).forEach(a => {
+    a.addEventListener("click", function (e) {
+        const ripple = document.createElement("div"),
+            rect = a.getBoundingClientRect();
+        ripple.className = "animate",
+        ripple.style.left = `${e.x - rect.left}px`,
+        ripple.style.top = `${e.y - rect.top}px`,
+        ripple.style.background = `#${a.dataset.color !== undefined ? a.dataset.color : "bdc3c7"}`,
+        ripple.style.setProperty("--material-scale", a.offsetWidth),
+        a.append(ripple),
+        setTimeout(function () {
+            ripple.parentNode.removeChild(ripple)
+        }, 500)
+    })
+})
+      </script>
       <!-- end plant -->
       <!-- about -->
       <div id="about" class="about">
@@ -197,7 +208,7 @@
                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                   <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                      <div class="about-box">
-                        <h2>2022</h2>
+                        <h2 class="color">2022</h2>
                         <div class="white-bg">
                            <span>Since</span> 
                         </div>
@@ -205,7 +216,7 @@
                   </div>
                   <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                      <div class="about-box">
-                        <h2>4</h2>
+                        <h2 class="color">4</h2>
                         <div class="white-bg">
                            <span>Projects</span> 
                         </div>
@@ -213,7 +224,7 @@
                   </div>
                   <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                      <div class="about-box">
-                        <h2>22</h2>
+                        <h2 class="color">22</h2>
                         <div class="white-bg">
                            <span>Members</span> 
                         </div>
@@ -223,8 +234,8 @@
                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                   <div class="about-box">
                      <div class="titlepage">
-                        <h2>About US</h2>
-                        <span>저희는 신성고등학교 정보 동아리 프론입니다! 소프트웨어, 웹, 서버, 보안, 아두이노 등을 위주로 활동하고 있습니다.</span> 
+                        <h2 class="color">About US</h2>
+                        <span class="color">저희는 신성고등학교 정보 동아리 프론입니다! 소프트웨어, 웹, 서버, 보안, 아두이노 등을 위주로 활동하고 있습니다.</span> 
                         <div class="read-more">
                            <a  href="https://shinsungpron.github.io" target="_blank">Read More</a>
                         </div>
