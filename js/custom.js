@@ -33,7 +33,7 @@ let akemihomura1 = akemihomura.split(",");
 const des = akemihomura1[2];
 const ton = akemihomura1[1];
 
-let figureimagelist = "일론 머스크,이재용,수지,루피,호시노 아이,마동석,로버트 다우니 주니어,장원영,아이유".split(",");
+let figureimagelist = "일론 머스크,이재용,수지,루피,호시노 아이,마동석,로버트 다우니 주니어,장원영,아이유,유재석,손흥민,이강인,가우르 구라,김광규,공유,콜트".split(",");
 const figurename = figureimagelist[resultnum];
 
 window.onload=function(){
