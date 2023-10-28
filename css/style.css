@@ -4,7 +4,12 @@
 /*--------------------------------------------------------------------- import Fonts ---------------------------------------------------------------------*/
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
-
+@font-face {
+     font-family: 'KCC-Ganpan';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2') format('woff2');
+     font-weight: normal;
+     font-style: normal;
+ }
 
 /*--------------------------------------------------------------------- import Files ---------------------------------------------------------------------*/
 
@@ -1567,7 +1572,7 @@ input[type="radio"] .styled:checked+label::after {
 
 /*--------------------------------------------------------------------- layout new css ---------------------------------------------------------------------*/
 .marginii {
-     margin: 154px 0px 100px 0px;
+     margin: 160px 0px 100px 0px;
 }
 .carousel-indicators li {
      display: none;

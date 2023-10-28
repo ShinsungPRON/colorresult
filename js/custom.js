@@ -4,8 +4,8 @@ D755A5,봄웜톤,따뜻한 봄웜톤 중 라이트 스프링의 당신! 영변�
 35A29F,봄웜톤,화사한 봄웜톤 중 트루 스프링의 당신! 트루 스프링은 봄웜톤 계열 중에서도 사랑스럽고 귀여운 이미지에요. 과한 음영과 그라데이션이 안어울리니 주의해주세요.
 008170,여름쿨톤,시원한 여름쿨톤 중 트루 섬머인 당신! 여름쿨톤은 정숙하고 차분한 인상을 줘요. 차가운 파스텔 색이 잘 어울리니 참고해주세요!
 068FFF,여름쿨톤,시원한 여름쿨톤 중 뮤트 섬머인 당신! 청량하면서도 깨끗한 느낌의 분위기와 청순한 이미지의 색이에요. 너무 밝은 색보다 약간 탁한 그레이 톤이 잘 어울리겠어요.
-00FFF6,여름쿨톤,시원한 여름쿨톤 중 라이트 섬머인 당신! 산뜻한 분위기를 가지고 있네요. 선명한 파스텔 톤과 잘 어울리고 흰색 악세서리가 코디를 잘 살려줘요.
-08FFC8,여름쿨톤,시원한 여름쿨톤 중 라이트 섬머인 당신! 차갑고 밝은 색이 잘 어울려요. 라이트 섬머는 여름쿨톤 중에서도 특히 밝고 화사한 인상이에요.
+8C8CFF,여름쿨톤,시원한 여름쿨톤 중 라이트 섬머인 당신! 산뜻한 분위기를 가지고 있네요. 선명한 파스텔 톤과 잘 어울리고 흰색 악세서리가 코디를 잘 살려줘요.
+A0FA78,여름쿨톤,시원한 여름쿨톤 중 라이트 섬머인 당신! 차갑고 밝은 색이 잘 어울려요. 라이트 섬머는 여름쿨톤 중에서도 특히 밝고 화사한 인상이에요.
 D25380,가을웜톤,따뜻한 가을웜톤 중 소프트 어텀인 당신! 가을 타입은 봄타입보다 따뜻하고 깊은 색을 가지고 있는데요. 이 톤의 사람들은 가장 어울리는 색의 스펙트럼이 넓어요.
 E08E6D,가을웜톤,따뜻한 가을웜톤 중 소프트 어텀인 당신! 성숙하고 세련된 이미지네요. 따뜻한 분위기와 감성이 잘 어울리는 색이에요. 스타일보다 분위기에 중심을 두는 코디가 좋아요.
 D83F31,가을웜톤,따뜻한 가을웜톤 중 트루 어텀인 당신! 가을 웜톤 중 소화할 수 있는 색이 가장 많은 스타일이네요. 이외에도 와인색이나 짙은 브라운색과 잘 어울려요.
@@ -15,7 +15,7 @@ CAEDFF,겨울쿨톤,시크한 겨울쿨톤 중 트루 윈터인 당신! 선명�
 662549,겨울쿨톤,시크한 겨울쿨톤 중 트루 윈터인 당신! 차가운 느낌의 쿨 채도 컬러라면 넓게 커버할 수 있어요. 시크한 이미지를 파란색·회색·검은색 코디로 살려보세요.
 65451F,겨울쿨톤,시크한 겨울쿨톤 중 다크 윈터인 당신! 밝은 색과 어두운 색의 대비가 큰 스타일링이 잘 어울려요. 채도가 높고 안정감이 있는 색을 잘 소화해요.`
 let colordescriptionlist = kanamemadokaiskawaii.split('\n');
-let colorlist = 'EF9595,FACBEA,D755A5,35A29F,008170,068FFF,00FFF6,08FFC8,D25380,E08E6D,D83F31,FC4F00,FBF0B2,CAEDFF,662549,65451F'.split(',');
+let colorlist = 'EF9595,FACBEA,D755A5,35A29F,008170,068FFF,8C8CFF,A0FA78,D25380,E08E6D,D83F31,FC4F00,FBF0B2,CAEDFF,662549,65451F'.split(',');
 const urlParams = new URL(location.href).searchParams;
 const userpersonalcolort = urlParams.get('color');
 const username = urlParams.get('name');
@@ -35,7 +35,13 @@ const ton = akemihomura1[1];
 
 let figureimagelist = "일론 머스크,이재용,수지,루피,호시노 아이,마동석,로버트 다우니 주니어,장원영,아이유,유재석,손흥민,이강인,가우르 구라,김광규,공유,콜트".split(",");
 const figurename = figureimagelist[resultnum];
-
+let figureimagelist2 = "아리,고죠 사토루,키아누 리브스,윈터,아냐 포저,페이커,유민상,박찬호,이하늬,강동원,톰 크루즈,빌 게이츠,조인성,조니 뎁,뽀로로,스칼렛 요한슨".split(",");[]
+const figurename2 = figureimagelist2[resultnum];
+let resultnumo = resultnum + 1;
+if(resultnumo == 16){
+	resultnumo = 0;
+}
+let figurename3 = "#" + colorlist[resultnumo];
 window.onload=function(){
     for (let i = 0; i < colorclass.length; i++) {
         colorclass[i].style.color = userpersonalcolor;
@@ -58,6 +64,13 @@ window.onload=function(){
     document.getElementById("resultcolor3").style.backgroundColor = userpersonalcolor;
     document.getElementById("resultcolor3").style.boxShadow = "0px 0px 15px 15px " + userpersonalcolor;*/
 	
+    document.getElementById("figurename2").innerHTML = figurename2;
+	document.getElementById("figureimg2").innerHTML = '<a class="material-ripple" data-color="' + userpersonalcolort + '"><img src="images/' + resultnum + 'a.png" alt="img"/></a>';
+    document.getElementById("figuredes2").innerHTML = username + " 님의 퍼스널컬러와 같은 퍼스널컬러를 가진 사람은 " + figurename2 + "입니다! 다른 친구들과 비교해보세요.";
+    document.getElementById("figurename3").innerHTML = figurename3;
+	document.getElementById("figureimg3").innerHTML = '<a class="material-ripple" data-color="' + userpersonalcolort + '"><div style="width:100%;height:50vh;background-color: '+figurename3 +'"></div></a>';
+    document.getElementById("figuredes3").innerHTML = username + " 님의 퍼스널컬러와 잘 어울리는 퍼스널컬러는 " + figurename3 + "입니다! 다른 친구들과 비교해보세요.";
+
     
   
 }
